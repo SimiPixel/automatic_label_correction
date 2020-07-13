@@ -1,4 +1,5 @@
 from ..utils import Falsify
+import numpy as np
 
 
 def CorrectionFactor(p, number_of_runs, method, X, y):

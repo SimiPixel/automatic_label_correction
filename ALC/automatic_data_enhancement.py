@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 import copy
-from utils import OneHot
+from .utils import OneHot
 
 
 

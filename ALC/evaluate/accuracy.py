@@ -1,7 +1,8 @@
 from ..utils import KFold, Falsify
 from sklearn.neighbors import KNeighborsClassifier as NNC
+import numpy as np
 
-def Accuracy(p, number_of_runs, method, clf = None, X, y):
+def Accuracy(p, number_of_runs, method, X, y, clf = None):
 
     if clf is None:
         clf = NNC()

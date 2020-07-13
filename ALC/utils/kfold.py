@@ -1,4 +1,5 @@
 from sklearn.utils import shuffle
+import numpy as np
 
 def KFold(K, X, y_groud_truth, y_false):
 

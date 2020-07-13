@@ -1,3 +1,6 @@
+import copy
+import numpy as np
+
 def Falsify(y, p):
     '''
     y: {np.array} of shape (n_samples)
