@@ -57,8 +57,8 @@ class NearestNeighbourCorrection:
 
     def _sweep(self, X, y):
 
-        y_corr = copy.copy(y)
-        n_corr = 0
+        y_corrected = copy.copy(y)
+        n_correction = 0
 
         self.knn.fit(X, y)
 

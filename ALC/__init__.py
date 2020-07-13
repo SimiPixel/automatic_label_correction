@@ -1,1 +1,4 @@
 from .automatic_data_enhancement import AutomaticDataEnhancement
+from .binary_cluster_correction import BinaryClusterCorrection
+from .cluster_correction import ClusterCorrection
+from .nearest_neighbour_correction import NearestNeighbourCorrection
