@@ -1,7 +1,7 @@
 import copy
 import numpy as np
 
-def Falsify(y, p):
+def Falsify(y, p, random_state = None):
     '''
     y: {np.array} of shape (n_samples)
     p: {float} between 0 and 1.
@@ -10,6 +10,7 @@ def Falsify(y, p):
     Returns: false labels
 
     '''
+    np.random.seed(random_state)
 
     y = copy.copy(y)
 

@@ -4,6 +4,11 @@ from sklearn.cluster import KMeans
 class ClusterCorrection:
 
     '''
+    Abstract: Let k be the number of clusters. Fit kMeans to the data and calculate every clusters label distribution, that is the label distribution
+              of all samples that identify with that cluster as its main cluster. Assign every sample its main cluster's label distribution.
+              Sum the label distribution for different values of k for every sample.
+              Every sample adopts its argmax of its summed label distribution as true label. 
+
     Parameters:
     -----------
 

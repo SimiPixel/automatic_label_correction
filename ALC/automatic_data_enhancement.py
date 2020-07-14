@@ -16,6 +16,14 @@ class AutomaticDataEnhancement:
     Implements Automatic Data Enhancement short ADE from paper in References.
     Automatically corrects labels.
 
+    Abstract: Train a MLP with low number of hidden nodes for a small step.
+              Predict all samples class distribution, update every samples class distribution by doing
+              small step towards prediction.
+              At every point every samples true label is the argmax of its label distribution.
+              Do till convergence.
+
+
+
     Parameters:
     -----------
 
@@ -82,7 +90,7 @@ class AutomaticDataEnhancement:
 
     '''
 
-    def __init__(self, N_epoch = 50, N_era = 50, learning_rate_w = 1e-5, learning_rate_p = 1e-3, eps = 1e-5):
+    def __init__(self, N_epoch = 50, N_era = 50, learning_rate_w = 1e-5, learning_rate_p = 1e-3, eps = 1e-5, verbose = False):
 
         self.N_epoch = N_epoch
         self.N_era = N_era
@@ -91,6 +99,7 @@ class AutomaticDataEnhancement:
         self.memory_SSE = None
         self.winner_H = None
         self.eps = eps
+        self.verbose = verbose
 
 
     def fit_transform(self, X, y):
@@ -137,7 +146,9 @@ class AutomaticDataEnhancement:
 
                 if current_era == (self.N_era-1):
                     memory_labels.append(self.y_adj)
-                    print('Did not reach convergence target for %d hidden nodes!' % hidden_nodes)
+                    if self.verbose:
+                        print('Did not reach convergence target for %d hidden nodes! Last two losses before early stop: %f -> %f' % (hidden_nodes,
+                                mem[-2], mem[-1]))
 
 
             if (hidden_nodes >= 3) and (memory_SSE_adj[-1][-1] > memory_SSE_adj[-2][-1]) and (memory_SSE_adj[-2][-1] > memory_SSE_adj[-3][-1]):
