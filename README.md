@@ -21,11 +21,10 @@ y_corrected = nnc.fit_transform(X, y)
 
 
 <p align="center">
-<img src="https://github.com/SimiPixel/automatic_label_correction/blob/master/readme_plot.svg" width="1100">
+<img src="https://github.com/SimiPixel/automatic_label_correction/blob/master/readme_plot.svg" width="1300">
 </p>
 
 ## API
-### Correction algorithms
 - ALC.NearestNeighbourCorrection
 - ALC.ClusterCorrection
 - ALC.AutomaticDataEnhancement
