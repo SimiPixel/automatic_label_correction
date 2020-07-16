@@ -1,10 +1,10 @@
-from ..utils import KFold, Falsify
+from ..utils import kfold, falsify
 from sklearn.neighbors import KNeighborsClassifier as NNC
 import numpy as np
 from pathos.multiprocessing import ProcessPool as Pool
 from pathos.multiprocessing import cpu_count
 
-def Accuracy(p, number_of_runs, method, X, y, clf = None, n_jobs = None):
+def accuracy(p, number_of_runs, method, X, y, clf = None, n_jobs = None):
     '''
     Returns: (array{mean_acc_corrected, mean_acc_false}, array{stddev_acc_corrected, stddev_acc_false})
     '''
@@ -24,14 +24,14 @@ def Accuracy(p, number_of_runs, method, X, y, clf = None, n_jobs = None):
     def run(_):
 
         # Artificially falsify
-        y_f = Falsify(y, p, random_state = _)
+        y_f = falsify(y, p, random_state = _)
 
         # Correct labels
         y_corrected = method.fit_transform(X, y_f)
 
         # Set up 10-fold-Cross validation
-        train_corr, test_corr = KFold(10, X, y, y_corrected)
-        train_f, test_f = KFold(10, X, y, y_f)
+        train_corr, test_corr = kfold(10, X, y, y_corrected)
+        train_f, test_f = kfold(10, X, y, y_f)
 
         score = np.zeros((2, 10))
 

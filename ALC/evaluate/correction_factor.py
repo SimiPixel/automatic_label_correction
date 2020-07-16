@@ -1,10 +1,10 @@
-from ..utils import Falsify
+from ..utils import falsify
 import numpy as np
 from pathos.multiprocessing import ProcessPool as Pool
 from pathos.multiprocessing import cpu_count
 
 
-def CorrectionFactor(p, number_of_runs, method, X, y, n_jobs = None):
+def correction_factor(p, number_of_runs, method, X, y, n_jobs = None):
 
     # Setup parallel job
     if n_jobs == -1:
@@ -17,7 +17,7 @@ def CorrectionFactor(p, number_of_runs, method, X, y, n_jobs = None):
     def run(_):
 
         # Artificially falsify
-        y_f = Falsify(y, p, random_state = _)
+        y_f = falsify(y, p, random_state = _)
 
         # Correct labels
         y_corrected = method.fit_transform(X, y_f)

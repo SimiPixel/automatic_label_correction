@@ -1,4 +1,4 @@
 import numpy as np
 
-from .correction_factor import CorrectionFactor
-from .accuracy import Accuracy
+from .correction_factor import correction_factor
+from .accuracy import accuracy

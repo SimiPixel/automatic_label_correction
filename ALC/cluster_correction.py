@@ -7,7 +7,7 @@ class ClusterCorrection:
     Abstract: Let k be the number of clusters. Fit kMeans to the data and calculate every clusters label distribution, that is the label distribution
               of all samples that identify with that cluster as its main cluster. Assign every sample its main cluster's label distribution.
               Sum the label distribution for different values of k for every sample.
-              Every sample adopts its argmax of its summed label distribution as true label. 
+              Every sample adopts its argmax of its summed label distribution as true label.
 
     Parameters:
     -----------
@@ -74,7 +74,7 @@ class ClusterCorrection:
             calc_weights = []
             for cluster_idx in range(k):
 
-                u = 1/self.n_unique_labels
+                u = self.label_totals # Original propositioin: u = 1/self.n_unique_labels
                 multiplier = min(np.log10(size_of_cluster[cluster_idx]), 2)
                 calc_weights.append(multiplier * (cluster_label_distro[cluster_idx]-u)/self.label_totals)
             calc_weights = np.array(calc_weights)

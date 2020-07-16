@@ -9,6 +9,7 @@ class AutomaticDataEnhancement:
 
     '''
     # Best till now is
+    # N_epoch, N_era, eps
     # 100, 50, 10**-10 -> 145/150 bei p=0.4
     # 100, 20, 10**-10
     # 50, 50, 1e-5 -> 147/150 bei p=0.4
@@ -78,14 +79,10 @@ class AutomaticDataEnhancement:
     Example:
     -----------
     from ALC import AutomaticDataEnhancement as ADE
-    from ALC.utils import OneHot
 
     ade = ADE()
-    onehot = OneHot()
 
-    y = onehot.encode(y)
     y_corrected = ade.fit_transform(X, y)
-    y_corrected = onehot.decode(y_corrected)
 
 
     '''
