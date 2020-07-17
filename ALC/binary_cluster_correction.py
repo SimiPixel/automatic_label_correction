@@ -8,8 +8,8 @@ class BinaryClusterCorrection:
     '''
     Abstract: Take all samples out of X, with same class labels y. Use kMeans to find 2 cluster centroids, since all samples are either Correct or False.
               Find main cluster centroid. Mark all samples that belong to main cluster.
-              Repeat for all classes. Train NNC using only marked samples.
-              Treat all unmarked samples as unlabeled. Use trained NNC to predict those labels. Treat as true labels. Done.
+              Repeat for all classes. Train KNN (Nearest neighbors classifier) using only marked samples.
+              Treat all unmarked samples as unlabeled. Use trained KNN to predict those labels. Treat as true labels. Done.
 
 
     Methods:
