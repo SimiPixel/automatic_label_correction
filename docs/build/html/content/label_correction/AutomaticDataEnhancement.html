@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>ALC.AutomaticDataEnhancement &#8212; ALC 20.07.2020 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ALC.ClusterCorrection" href="ClusterCorrection.html" />
+    <link rel="prev" title="ALC.NearestNeighbourCorrection" href="NearestNeighbourCorrection.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ALC.automatic_data_enhancement">
+<span id="alc-automaticdataenhancement"></span><h1>ALC.AutomaticDataEnhancement<a class="headerlink" href="#module-ALC.automatic_data_enhancement" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ALC.automatic_data_enhancement.AutomaticDataEnhancement">
+<em class="property">class </em><code class="sig-prename descclassname">ALC.automatic_data_enhancement.</code><code class="sig-name descname">AutomaticDataEnhancement</code><span class="sig-paren">(</span><em class="sig-param">N_epoch=50</em>, <em class="sig-param">N_era=50</em>, <em class="sig-param">learning_rate_w=1e-05</em>, <em class="sig-param">learning_rate_p=0.001</em>, <em class="sig-param">eps=1e-05</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.automatic_data_enhancement.AutomaticDataEnhancement" title="Permalink to this definition">¶</a></dt>
+<dd><p># Best till now is
+# N_epoch, N_era, eps
+# 100, 50, 10**-10 -&gt; 145/150 bei p=0.4
+# 100, 20, 10**-10
+# 50, 50, 1e-5 -&gt; 147/150 bei p=0.4</p>
+<p>Implements Automatic Data Enhancement short ADE from paper in References.
+Automatically corrects labels.</p>
+<dl class="simple">
+<dt>Abstract: Train a MLP with low number of hidden nodes for a small step.</dt><dd><p>Predict all samples class distribution, update every samples class distribution by doing
+small step towards prediction.
+At every point every samples true label is the argmax of its label distribution.
+Do till convergence.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>N_epoch: {int}, default = 50</dt><dd><p>Number of learning steps per epoch.</p>
+</dd>
+<dt>N_era: {int}, default = 50</dt><dd><p>Maximal number of eras. Early stopping if convergence.</p>
+</dd>
+<dt>learning_rate_w: {float}, default = 1e-5</dt><dd><p>Learning rate of the MLP parameters.</p>
+</dd>
+<dt>learning_rate_p: {float}, default = 1e-3</dt><dd><p>Learning rate of the class probabilities adaption.</p>
+</dd>
+<dt>eps: {float}, default = 1e-5</dt><dd><p>Convergence criterion w.r.t. era time</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>.winner_H: {int}</dt><dd><p>number of hidden nodes that lead to lowest total loss</p>
+</dd>
+<dt>.memory_SSE: {np.array of lists} of quasi-shape = (max_number_of_hidden_nodes, steps_till_convergence)</dt><dd><p>Loss for different number of hidden nodes at different era times.</p>
+</dd>
+</dl>
+<p>.fit_transform(X, y):</p>
+<blockquote>
+<div><p>X: {np.array} of shape (n_samples, n_features)</p>
+<p>y: {np.array} of shape (n_samples)</p>
+<p>Returns: Corrected labels</p>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>[1] An algorithm for correcting mislabeled data. Xinchuan Zeng and Tony R. Martinez.</dt><dd><p>Computer Science Department, Brigham Young University, Provo, UT 84602, USA</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>from ALC import AutomaticDataEnhancement as ADE</p>
+<p>ade = ADE()</p>
+<p>y_corrected = ade.fit_transform(X, y)</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">ALC</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Label correction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="NearestNeighbourCorrection.html">ALC.NearestNeighbourCorrection</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ALC.AutomaticDataEnhancement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ClusterCorrection.html">ALC.ClusterCorrection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BinaryClusterCorrection.html">ALC.ClusterCorrection</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Utilities</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">ALC.utils</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Evaluate</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../evaluate.html">ALC.evaluate</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="NearestNeighbourCorrection.html" title="previous chapter">ALC.NearestNeighbourCorrection</a></li>
+      <li>Next: <a href="ClusterCorrection.html" title="next chapter">ALC.ClusterCorrection</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Simon Bachhuber.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/content/label_correction/AutomaticDataEnhancement.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

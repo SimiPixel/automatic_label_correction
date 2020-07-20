@@ -19,7 +19,7 @@ def accuracy(p, number_of_runs, method, X, y, clf = None, n_jobs = None):
 
 
     if clf is None:
-        clf = NNC()
+        clf = NNC(n_neighbors= 1)
 
     def run(_):
 

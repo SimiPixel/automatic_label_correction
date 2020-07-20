@@ -49,7 +49,11 @@ class ClusterCorrection:
 
         for i in range(1, self.a+1):
 
-            k = i/self.a * self.N/2 + 2
+            N = self.N
+            if N>100:
+                N = 100
+
+            k = i/self.a * N/2 + 2
             k = int(k)
 
             ## Clustering
