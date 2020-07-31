@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.neighbors import KNeighborsClassifier as KNN
+import copy
 
 
 class BinaryClusterCorrection:
@@ -30,7 +31,9 @@ class BinaryClusterCorrection:
         self.kmeans = KMeans(n_clusters=2)
 
 
-    def fit_transform(self, X, y):
+    def fit_transform(self, X, _y):
+
+        y = copy.copy(_y)
 
         N = X.shape[0]
         unique_labels = np.unique(y)

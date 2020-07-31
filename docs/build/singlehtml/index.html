@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>ALC 20.07.2020 documentation</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html#document-index">
+          <span>ALC 20.07.2020 documentation</span></a></h1>
+        <h2 class="heading"><span>ALC 20.07.2020 documentation</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        <a class="uplink" href="index.html#document-index">Contents</a>
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="alc">
+<h1>ALC<a class="headerlink" href="#alc" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-ALC"></span><div class="section" id="alc-package">
+<h2>ALC package<a class="headerlink" href="#alc-package" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="subpackages">
+<h3>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<span id="document-ALC.evaluate"></span><div class="section" id="alc-evaluate-package">
+<h4>ALC.evaluate package<a class="headerlink" href="#alc-evaluate-package" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="submodules">
+<h5>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="module-ALC.evaluate.accuracy">
+<span id="alc-evaluate-accuracy-module"></span><h5>ALC.evaluate.accuracy module<a class="headerlink" href="#module-ALC.evaluate.accuracy" title="Permalink to this headline">¶</a></h5>
+<dl class="function">
+<dt id="ALC.evaluate.accuracy.accuracy">
+<code class="sig-prename descclassname">ALC.evaluate.accuracy.</code><code class="sig-name descname">accuracy</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">number_of_runs</em>, <em class="sig-param">method</em>, <em class="sig-param">X</em>, <em class="sig-param">y</em>, <em class="sig-param">clf=None</em>, <em class="sig-param">n_jobs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.evaluate.accuracy.accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns: (array{mean_acc_corrected, mean_acc_false}, array{stddev_acc_corrected, stddev_acc_false})</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ALC.evaluate.correction_factor">
+<span id="alc-evaluate-correction-factor-module"></span><h5>ALC.evaluate.correction_factor module<a class="headerlink" href="#module-ALC.evaluate.correction_factor" title="Permalink to this headline">¶</a></h5>
+<dl class="function">
+<dt id="ALC.evaluate.correction_factor.correction_factor">
+<code class="sig-prename descclassname">ALC.evaluate.correction_factor.</code><code class="sig-name descname">correction_factor</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">number_of_runs</em>, <em class="sig-param">method</em>, <em class="sig-param">X</em>, <em class="sig-param">y</em>, <em class="sig-param">n_jobs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.evaluate.correction_factor.correction_factor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ALC.evaluate">
+<span id="module-contents"></span><h5>Module contents<a class="headerlink" href="#module-ALC.evaluate" title="Permalink to this headline">¶</a></h5>
+</div>
+</div>
+<span id="document-ALC.utils"></span><div class="section" id="alc-utils-package">
+<h4>ALC.utils package<a class="headerlink" href="#alc-utils-package" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="submodules">
+<h5>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="module-ALC.utils.convert_labels">
+<span id="alc-utils-convert-labels-module"></span><h5>ALC.utils.convert_labels module<a class="headerlink" href="#module-ALC.utils.convert_labels" title="Permalink to this headline">¶</a></h5>
+<dl class="function">
+<dt id="ALC.utils.convert_labels.convert_labels">
+<code class="sig-prename descclassname">ALC.utils.convert_labels.</code><code class="sig-name descname">convert_labels</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">unique_labels</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.utils.convert_labels.convert_labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ALC.utils.falsify">
+<span id="alc-utils-falsify-module"></span><h5>ALC.utils.falsify module<a class="headerlink" href="#module-ALC.utils.falsify" title="Permalink to this headline">¶</a></h5>
+<dl class="function">
+<dt id="ALC.utils.falsify.falsify">
+<code class="sig-prename descclassname">ALC.utils.falsify.</code><code class="sig-name descname">falsify</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">p</em>, <em class="sig-param">random_state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.utils.falsify.falsify" title="Permalink to this definition">¶</a></dt>
+<dd><p>y: {np.array} of shape (n_samples)
+p: {float} between 0 and 1.</p>
+<blockquote>
+<div><p>Percentage of false labels afterwards</p>
+</div></blockquote>
+<p>Returns: false labels</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ALC.utils.kfold">
+<span id="alc-utils-kfold-module"></span><h5>ALC.utils.kfold module<a class="headerlink" href="#module-ALC.utils.kfold" title="Permalink to this headline">¶</a></h5>
+<dl class="function">
+<dt id="ALC.utils.kfold.kfold">
+<code class="sig-prename descclassname">ALC.utils.kfold.</code><code class="sig-name descname">kfold</code><span class="sig-paren">(</span><em class="sig-param">K</em>, <em class="sig-param">X</em>, <em class="sig-param">y_groud_truth</em>, <em class="sig-param">y_false</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.utils.kfold.kfold" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ALC.utils.onehot">
+<span id="alc-utils-onehot-module"></span><h5>ALC.utils.onehot module<a class="headerlink" href="#module-ALC.utils.onehot" title="Permalink to this headline">¶</a></h5>
+<dl class="class">
+<dt id="ALC.utils.onehot.OneHot">
+<em class="property">class </em><code class="sig-prename descclassname">ALC.utils.onehot.</code><code class="sig-name descname">OneHot</code><a class="headerlink" href="#ALC.utils.onehot.OneHot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ALC.utils.onehot.OneHot.decode">
+<code class="sig-name descname">decode</code><span class="sig-paren">(</span><em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.utils.onehot.OneHot.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ALC.utils.onehot.OneHot.encode">
+<code class="sig-name descname">encode</code><span class="sig-paren">(</span><em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.utils.onehot.OneHot.encode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ALC.utils">
+<span id="module-contents"></span><h5>Module contents<a class="headerlink" href="#module-ALC.utils" title="Permalink to this headline">¶</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="submodules">
+<h3>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="module-ALC.automatic_data_enhancement">
+<span id="alc-automatic-data-enhancement-module"></span><h3>ALC.automatic_data_enhancement module<a class="headerlink" href="#module-ALC.automatic_data_enhancement" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ALC.automatic_data_enhancement.AutomaticDataEnhancement">
+<em class="property">class </em><code class="sig-prename descclassname">ALC.automatic_data_enhancement.</code><code class="sig-name descname">AutomaticDataEnhancement</code><span class="sig-paren">(</span><em class="sig-param">N_epoch=50</em>, <em class="sig-param">N_era=50</em>, <em class="sig-param">learning_rate_w=1e-05</em>, <em class="sig-param">learning_rate_p=0.001</em>, <em class="sig-param">eps=1e-05</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.automatic_data_enhancement.AutomaticDataEnhancement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p># Best till now is
+# N_epoch, N_era, eps
+# 100, 50, 10**-10 -&gt; 145/150 bei p=0.4
+# 100, 20, 10**-10
+# 50, 50, 1e-5 -&gt; 147/150 bei p=0.4</p>
+<p>Implements Automatic Data Enhancement short ADE from paper in References.
+Automatically corrects labels.</p>
+<dl class="simple">
+<dt>Abstract: Train a MLP with low number of hidden nodes for a small step.</dt><dd><p>Predict all samples class distribution, update every samples class distribution by doing
+small step towards prediction.
+At every point every samples true label is the argmax of its label distribution.
+Do till convergence.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>N_epoch: {int}, default = 50</dt><dd><p>Number of learning steps per epoch.</p>
+</dd>
+<dt>N_era: {int}, default = 50</dt><dd><p>Maximal number of eras. Early stopping if convergence.</p>
+</dd>
+<dt>learning_rate_w: {float}, default = 1e-5</dt><dd><p>Learning rate of the MLP parameters.</p>
+</dd>
+<dt>learning_rate_p: {float}, default = 1e-3</dt><dd><p>Learning rate of the class probabilities adaption.</p>
+</dd>
+<dt>eps: {float}, default = 1e-5</dt><dd><p>Convergence criterion w.r.t. era time</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>.winner_H: {int}</dt><dd><p>number of hidden nodes that lead to lowest total loss</p>
+</dd>
+<dt>.memory_SSE: {np.array of lists} of quasi-shape = (max_number_of_hidden_nodes, steps_till_convergence)</dt><dd><p>Loss for different number of hidden nodes at different era times.</p>
+</dd>
+</dl>
+<p>.fit_transform(X, y):</p>
+<blockquote>
+<div><p>X: {np.array} of shape (n_samples, n_features)</p>
+<p>y: {np.array} of shape (n_samples)</p>
+<p>Returns: Corrected labels</p>
+</div></blockquote>
+<blockquote>
+<div><dl class="simple">
+<dt>[1] An algorithm for correcting mislabeled data. Xinchuan Zeng and Tony R. Martinez.</dt><dd><p>Computer Science Department, Brigham Young University, Provo, UT 84602, USA</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>from ALC import AutomaticDataEnhancement as ADE</p>
+<p>ade = ADE()</p>
+<p>y_corrected = ade.fit_transform(X, y)</p>
+<dl class="method">
+<dt id="ALC.automatic_data_enhancement.AutomaticDataEnhancement.fit_transform">
+<code class="sig-name descname">fit_transform</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.automatic_data_enhancement.AutomaticDataEnhancement.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ALC.automatic_data_enhancement.MLP">
+<em class="property">class </em><code class="sig-prename descclassname">ALC.automatic_data_enhancement.</code><code class="sig-name descname">MLP</code><span class="sig-paren">(</span><em class="sig-param">D_in</em>, <em class="sig-param">H</em>, <em class="sig-param">D_out</em>, <em class="sig-param">learning_rate_w</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.automatic_data_enhancement.MLP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ALC.automatic_data_enhancement.MLP.do_step">
+<code class="sig-name descname">do_step</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.automatic_data_enhancement.MLP.do_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ALC.binary_cluster_correction">
+<span id="alc-binary-cluster-correction-module"></span><h3>ALC.binary_cluster_correction module<a class="headerlink" href="#module-ALC.binary_cluster_correction" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ALC.binary_cluster_correction.BinaryClusterCorrection">
+<em class="property">class </em><code class="sig-prename descclassname">ALC.binary_cluster_correction.</code><code class="sig-name descname">BinaryClusterCorrection</code><a class="headerlink" href="#ALC.binary_cluster_correction.BinaryClusterCorrection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>Abstract: Take all samples out of X, with same class labels y. Use kMeans to find 2 cluster centroids, since all samples are either Correct or False.</dt><dd><p>Find main cluster centroid. Mark all samples that belong to main cluster.
+Repeat for all classes. Train KNN (Nearest neighbors classifier) using only marked samples.
+Treat all unmarked samples as unlabeled. Use trained KNN to predict those labels. Treat as true labels. Done.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>.fit_transform(X, y):</dt><dd><p>Returns: y_corrected</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>[1] Multi-Class Unsupervised Classification with Label Correction of HRCT Lung Images. Mithun Nagendra Prasad and Arcot Sowmya.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="ALC.binary_cluster_correction.BinaryClusterCorrection.fit_transform">
+<code class="sig-name descname">fit_transform</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.binary_cluster_correction.BinaryClusterCorrection.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ALC.cluster_correction">
+<span id="alc-cluster-correction-module"></span><h3>ALC.cluster_correction module<a class="headerlink" href="#module-ALC.cluster_correction" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ALC.cluster_correction.ClusterCorrection">
+<em class="property">class </em><code class="sig-prename descclassname">ALC.cluster_correction.</code><code class="sig-name descname">ClusterCorrection</code><span class="sig-paren">(</span><em class="sig-param">number_of_clusterings=10</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.cluster_correction.ClusterCorrection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>Abstract: Let k be the number of clusters. Fit kMeans to the data and calculate every clusters label distribution, that is the label distribution</dt><dd><p>of all samples that identify with that cluster as its main cluster. Assign every sample its main cluster’s label distribution.
+Sum the label distribution for different values of k for every sample.
+Every sample adopts its argmax of its summed label distribution as true label.</p>
+</dd>
+</dl>
+<p>number_of_clusterings: {int}, default = 10</p>
+<p>.fit_transform(X, y):</p>
+<blockquote>
+<div><p>[1] Label Noise Correction Methods. Bryce Nicholson, Victor S. Sheng, Jing Zhang, Zhiheng Wang.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="ALC.cluster_correction.ClusterCorrection.fit_transform">
+<code class="sig-name descname">fit_transform</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.cluster_correction.ClusterCorrection.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ALC.nearest_neighbour_correction">
+<span id="alc-nearest-neighbour-correction-module"></span><h3>ALC.nearest_neighbour_correction module<a class="headerlink" href="#module-ALC.nearest_neighbour_correction" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="ALC.nearest_neighbour_correction.NearestNeighbourCorrection">
+<em class="property">class </em><code class="sig-prename descclassname">ALC.nearest_neighbour_correction.</code><code class="sig-name descname">NearestNeighbourCorrection</code><span class="sig-paren">(</span><em class="sig-param">K=8</em>, <em class="sig-param">stopping_crit=0</em>, <em class="sig-param">conf_threshold=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.nearest_neighbour_correction.NearestNeighbourCorrection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>Abstract: Iterate through every sample and classifiy it using the k-nearest neighors.</dt><dd><p>If the classifier predicts a different label with a confidence higher than some threshold,
+store the predicted label and mark the sample.
+After iterating through all samples once, all marked samples adopt their predicted label.
+Continue, till there is no more change in labels.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>K: {int}, default = 8</dt><dd><p>Number of nearest neighbours to consider</p>
+</dd>
+</dl>
+<p>stopping_crit: {int} &gt;= 0, default = 0</p>
+<p>conf_threshold: {float}, default = 0.5</p>
+<p>.fit_transform(X, y)</p>
+<dl class="method">
+<dt id="ALC.nearest_neighbour_correction.NearestNeighbourCorrection.fit_transform">
+<code class="sig-name descname">fit_transform</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#ALC.nearest_neighbour_correction.NearestNeighbourCorrection.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ALC">
+<span id="module-contents"></span><h3>Module contents<a class="headerlink" href="#module-ALC" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        <a class="uplink" href="index.html#document-index">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Simon Bachhuber.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>
